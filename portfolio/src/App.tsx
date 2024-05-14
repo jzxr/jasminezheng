@@ -20,7 +20,7 @@ const App: React.FC = () => {
         <Header toggleDarkMode={toggleDarkMode} darkMode={darkMode} />
 
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Home darkMode={darkMode} />} />
           <Route path="/projects" element={<Projects />} />
         </Routes>
         <Footer />

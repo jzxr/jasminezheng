@@ -1,0 +1,77 @@
+.home-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  overflow: hidden;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.home-section.light {
+  background-color: #fff;
+  color: #000;
+}
+
+.home-section.dark {
+  background-color: #000;
+  color: #fff;
+}
+
+.introduction {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.profile-image {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+  animation: slideIn 2s ease-in-out;
+}
+
+.intro-text h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  animation: fadeInText 3s ease-in-out;
+}
+
+.intro-text p {
+  font-size: 1.2rem;
+  animation: fadeInText 4s ease-in-out;
+}
+
+/* Keyframes for the animations */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInText {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
