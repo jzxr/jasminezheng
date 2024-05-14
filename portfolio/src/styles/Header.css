@@ -1,60 +1,72 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 15px; /* Reduced padding */
+  box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+  background-color: var(--header-background);
+  color: var(--header-color);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+}
+
+.nav-list {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-item {
+  margin-left: 15px; /* Reduced margin */
+}
+
+.nav-item a {
+  text-decoration: none;
+  color: var(--header-color);
+  padding: 5px 5px; /* Reduced padding */
+  display: flex; /* Use flexbox for alignment */
+  align-items: center; /* Center vertically */
+  height: 60px; /* Match the height of the logo */
+  transition: background-color 0.3s;
+}
+
+
+.logo {
+  width: 50px; /* Adjusted size */
+  height: auto;
+}
+
 .toggle-switch {
-    position: relative;
-    display: inline-block;
-    width: 50px;
-    height: 25px;
-  }
-  
-  .toggle-switch input[type="checkbox"] {
-    display: none;
-  }
-  
-  .toggle-switch label {
-    position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #ccc;
-    border-radius: 25px;
-    transition: background-color 0.3s;
-  }
-  
-  .toggle-switch label:before {
-    position: absolute;
-    content: "";
-    height: 21px;
-    width: 21px;
-    left: 2px;
-    bottom: 2px;
-    background-color: white;
-    border-radius: 50%;
-    transition: transform 0.3s;
-  }
-  
-  .toggle-switch input[type="checkbox"]:checked + label {
-    background-color: #333;
-  }
-  
-  .toggle-switch input[type="checkbox"]:checked + label:before {
-    transform: translateX(25px);
-  }
-  
-  .sun-icon,
-  .moon-icon {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 21px;
-    height: 21px;
-  }
-  
-  .sun-icon {
-    left: 2px;
-  }
-  
-  .moon-icon {
-    right: 2px;
-  }
-  
+  display: flex;
+  align-items: center;
+}
+
+#toggle {
+  display: none;
+}
+
+.toggle-label {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px; /* Adjusted size */
+  height: 30px; /* Adjusted size */
+  background-color: #ff69b4; /* Hot pink background */
+  border-radius: 50%; /* Circular toggle button */
+  transition: background-color 0.3s;
+}
+
+.icon {
+  font-size: 20px; /* Adjusted size */
+  color: white; /* White icons */
+}
+
+#toggle:checked + .toggle-label {
+  background-color: #ff69b4; /* Blue violet background when checked */
+}
