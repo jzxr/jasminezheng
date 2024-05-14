@@ -13,7 +13,6 @@ footer {
     display: flex;
     justify-content: center;
     gap: 20px;
-    margin-bottom: 10px;
   }
   
   .social-media a {

@@ -1,0 +1,60 @@
+.toggle-switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 25px;
+  }
+  
+  .toggle-switch input[type="checkbox"] {
+    display: none;
+  }
+  
+  .toggle-switch label {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    border-radius: 25px;
+    transition: background-color 0.3s;
+  }
+  
+  .toggle-switch label:before {
+    position: absolute;
+    content: "";
+    height: 21px;
+    width: 21px;
+    left: 2px;
+    bottom: 2px;
+    background-color: white;
+    border-radius: 50%;
+    transition: transform 0.3s;
+  }
+  
+  .toggle-switch input[type="checkbox"]:checked + label {
+    background-color: #333;
+  }
+  
+  .toggle-switch input[type="checkbox"]:checked + label:before {
+    transform: translateX(25px);
+  }
+  
+  .sun-icon,
+  .moon-icon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 21px;
+    height: 21px;
+  }
+  
+  .sun-icon {
+    left: 2px;
+  }
+  
+  .moon-icon {
+    right: 2px;
+  }
+  

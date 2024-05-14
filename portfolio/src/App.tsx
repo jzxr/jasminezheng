@@ -5,6 +5,7 @@ import Footer from './components/Footer';
 import Home from './components/Home';
 import Projects from './components/Projects';
 import './App.css';
+import './styles/Header.css';
 
 const App: React.FC = () => {
   const [darkMode, setDarkMode] = useState(false);
@@ -16,7 +17,8 @@ const App: React.FC = () => {
   return (
     <div className={darkMode ? 'dark-mode' : 'light-mode'}>
       <Router>
-        <Header toggleDarkMode={toggleDarkMode} />
+        <Header toggleDarkMode={toggleDarkMode} darkMode={darkMode} />
+
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/projects" element={<Projects />} />
