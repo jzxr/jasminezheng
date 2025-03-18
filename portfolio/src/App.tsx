@@ -6,6 +6,7 @@ import Home from './components/Home';
 import Projects from './components/Projects';
 import './App.css';
 import './styles/Header.css';
+import ProjectDetails from './components/ProjectDetails';
 
 const App: React.FC = () => {
   const [darkMode, setDarkMode] = useState(false);
@@ -22,6 +23,7 @@ const App: React.FC = () => {
         <Routes>
           <Route path="/" element={<Home darkMode={darkMode} />} />
           <Route path="/projects" element={<Projects />} />
+          <Route path="/projects/:projectId" element={<ProjectDetails />} />
         </Routes>
         <Footer />
       </Router>
