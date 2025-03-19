@@ -35,8 +35,8 @@ const projectDetails = {
       <h3>🏆 Award Recognition:</h3>
       <ul>
         <li><strong>SG Digital Wonderland Finalist</strong> – Awarded by the <strong>Infocomm Media Development Authority (IMDA)</strong>.</li>
-        <li>Recognized for outstanding innovation in **Smart Home Automation**.</li>
-        <li>Showcased the project in one of Singapore’s largest **technology and innovation events**.</li>
+        <li>Implement assistive technology to help elderly or disabled who live alone.</li>
+        <li>Showcased the project in one of Singapore’s largest technology and innovation events.</li>
       </ul>
     `,
   },
@@ -58,7 +58,7 @@ const projectDetails = {
       <ul>
         <li>Enhances cashless payment ease in hawker centres.</li>
         <li>Uses <strong>image recognition</strong> instead of QR codes for identifying merchants.</li>
-        <li>Predicts the transaction amount for a seamless **one-step scanning and payment process**.</li>
+        <li>Predicts the transaction amount for a seamless <strong>one-step scanning and payment process</strong>.</li>
         <li>Users can <strong>confirm or adjust the price before finalizing payment</strong>.</li>
       </ul>
 

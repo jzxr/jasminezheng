@@ -3,7 +3,7 @@
   min-height: 100vh;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   padding: 40px 20px;
   transition: background-color 0.3s;
 }
@@ -96,4 +96,29 @@
 .slick-prev:hover:before,
 .slick-next:hover:before {
   filter: brightness(1);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .project-details {
+    max-width: 750px;
+    padding: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .project-details {
+    max-width: 80%;
+    padding: 30px;
+  }
+  .project-video {
+    max-height: 300px;
+  }
+  .slick-prev {
+    left: -40px;
+  }
+  
+  .slick-next {
+    right: -40px;
+  }
 }
