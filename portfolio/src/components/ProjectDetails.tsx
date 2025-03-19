@@ -51,8 +51,8 @@ const projectDetails = {
       "/images/polyfintech-2018/2.jpeg"
     ],
     content: `
-      <p>We’re proud of our team, <strong>Polygen</strong>, from the <strong>Diploma in Business Applications</strong> at Republic Polytechnic, 
-      who showcased their <strong>Hawker Centre Cashless Payment</strong> solution at the <strong>Singapore Fintech Festival</strong>! 🚀💳</p>
+      <p>Our team, <strong>Polygen</strong>, from the <strong>Diploma in Business Applications</strong> at Republic Polytechnic, 
+      showcased our <strong>Hawker Centre Cashless Payment</strong> solution at the <strong>Singapore Fintech Festival</strong>! 🚀💳</p>
 
       <h3>🌟 What This Project Does:</h3>
       <ul>
