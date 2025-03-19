@@ -22,8 +22,8 @@ const App: React.FC = () => {
 
         <Routes>
           <Route path="/" element={<Home darkMode={darkMode} />} />
-          <Route path="/projects" element={<Projects />} />
-          <Route path="/projects/:projectId" element={<ProjectDetails />} />
+          <Route path="/projects" element={<Projects darkMode={darkMode}/>} />
+          <Route path="/projects/:projectId" element={<ProjectDetails darkMode={darkMode}/>} />
         </Routes>
         <Footer />
       </Router>
