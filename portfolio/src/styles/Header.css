@@ -1,8 +1,13 @@
 .header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999; /* ensures it's on top of everything */
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 5px 15px; /* Reduced padding */
+  padding: 5px 15px;
   box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
   background-color: var(--header-background);
   color: var(--header-color);
@@ -21,6 +26,14 @@
   margin: 0;
 }
 
+#projects{
+  scroll-margin-top: 80px; 
+}
+
+#timeline{
+  scroll-margin-top: 20px; 
+}
+
 .nav-item {
   margin-left: 15px; /* Reduced margin */
 }
@@ -28,12 +41,32 @@
 .nav-item a {
   text-decoration: none;
   color: var(--header-color);
+  font-weight: 600;
   display: flex; /* Use flexbox for alignment */
   align-items: center; /* Center vertically */
   height: 60px; /* Match the height of the logo */
   transition: background-color 0.3s;
 }
+.nav-link {
+  background: none;
+  border: none;
+  font: inherit;
+  font-weight: 600;
+  font-size: inherit;
+  line-height: inherit;
+  color: var(--header-color);
+  cursor: pointer;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  height: 60px;
+  padding: 0;
+  transition: background-color 0.3s;
+}
 
+.nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.1); /* matches hover effect */
+}
 .logo {
   width: 120px; /* Adjusted size */
   height: auto;
@@ -109,4 +142,5 @@
   .nav {
     margin-bottom: 10px;
   }
+  
 }

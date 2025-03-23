@@ -1,6 +1,6 @@
 import React from 'react';
 import '../styles/Home.css';
-import profileImage from '../images/profile-image.jpeg'; // Make sure to have an image in the correct path
+import profileImage from '../images/profile-image.jpeg';
 
 interface HomeProps {
   darkMode: boolean;
@@ -8,12 +8,20 @@ interface HomeProps {
 
 const Home: React.FC<HomeProps> = ({ darkMode }) => {
   return (
-    <section className={`home-section ${darkMode ? 'dark' : 'light'}`}>
+    <section id="home" className={`home-section ${darkMode ? 'dark' : 'light'}`}>
       <div className="introduction">
         <img src={profileImage} alt="Profile" className="profile-image" />
         <div className="intro-text">
           <h1>Hello, I'm Jasmine Zheng</h1>
-          <p>Welcome to my portfolio website. I am a Full Stack Developer with a passion for creating beautiful and functional web applications. Stay tuned for more updates!</p>
+          <p>I am a Full Stack Developer in Singapore.</p>
+          <div className="button-group">
+            <a href="/resume.pdf" download className="btn">
+              Download
+            </a>
+            <a href="mailto:jasminezxr@gmail.com?subject=Hiring Inquiry" className="btn btn-outline">
+              Hire Me
+            </a>
+          </div>
         </div>
       </div>
     </section>
@@ -21,4 +29,3 @@ const Home: React.FC<HomeProps> = ({ darkMode }) => {
 };
 
 export default Home;
-export {};

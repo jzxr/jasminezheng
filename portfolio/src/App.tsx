@@ -2,11 +2,10 @@ import React, { useEffect, useState } from "react";
 import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-import Home from "./components/Home";
-import Projects from "./components/Projects";
-import ProjectDetails from "./components/ProjectDetails";
 import "./App.css";
 import "./styles/Header.css";
+import HomePage from "./components/HomePage";
+import ProjectDetails from "./components/ProjectDetails";
 
 const App: React.FC = () => {
   const [darkMode, setDarkMode] = useState(() => {
@@ -19,7 +18,7 @@ const App: React.FC = () => {
       logo.setAttribute("href", darkMode ? "/logo-dark.png" : "/logo-light.png");
     }
     document.body.className = darkMode ? "dark-mode" : "light-mode";
-    localStorage.setItem("darkMode", darkMode.toString()); // 💾 Save user preference
+    localStorage.setItem("darkMode", darkMode.toString()); 
   }, [darkMode]);
 
   const toggleDarkMode = () => {
@@ -32,15 +31,14 @@ const App: React.FC = () => {
         <DynamicTitle />
         <Header toggleDarkMode={toggleDarkMode} darkMode={darkMode} />
         <Routes>
-          <Route path="/" element={<Home darkMode={darkMode} />} />
-          <Route path="/projects" element={<Projects darkMode={darkMode} />} />
+          <Route path="/" element={<HomePage darkMode={darkMode} />} />
           <Route path="/projects/:projectId" element={<ProjectDetails darkMode={darkMode} />} />
         </Routes>
         <Footer />
       </Router>
     </div>
   );
-};
+}; 
 
 const DynamicTitle: React.FC = () => {
   const location = useLocation();

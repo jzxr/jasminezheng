@@ -1,0 +1,95 @@
+.timeline-section {
+  padding: 4rem 2rem;
+  transition: background-color 0.3s ease;
+}
+
+.timeline-section.light {
+  background-color: #fff;
+}
+
+.timeline-section.dark {
+  background-color: #000;
+}
+
+.timeline-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: inherit;
+}
+
+.vertical-timeline-element-content {
+  transition: all 0.3s ease;
+}
+
+.timeline-section.light .vertical-timeline-element-content {
+  background: #fff;
+  color: #333;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.timeline-section.dark .vertical-timeline-element-content {
+  background: #2a2a2a;
+  color: #fff;
+  box-shadow: none;
+}
+
+.vertical-timeline-element-content h3,
+.vertical-timeline-element-content h4 {
+  margin: 0 0 0.5rem 0;
+}
+
+.tech-stack-container {
+  margin: 1rem 0 0.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tech-badge {
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.timeline-section.dark .tech-badge {
+  background-color: #ffc0cb;
+  color: #333;
+}
+
+.timeline-section.light .tech-badge {
+  background-color: #ffc0cb; 
+  color: #333;
+}
+
+.view-demo-button {
+  display: inline-block;
+  margin-top: 0.5rem;
+  padding: 8px 16px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.timeline-section.light .view-demo-button {
+  background-color: #ff69b4;
+  color: white;
+}
+
+.timeline-section.light .view-demo-button:hover {
+  background-color: #ff69b4;
+}
+
+.timeline-section.dark .view-demo-button {
+  background-color: #ff69b4;
+  color: #000;
+}
+
+.timeline-section.dark .view-demo-button:hover {
+  background-color: #ff69b4;
+  color: white;
+}

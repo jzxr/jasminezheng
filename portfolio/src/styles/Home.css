@@ -8,6 +8,8 @@
   text-align: center;
   overflow: hidden;
   transition: background-color 0.3s, color 0.3s;
+  margin: 0;
+  padding: 40px 20px;
 }
 
 .home-section.light {
@@ -46,6 +48,40 @@
   animation: fadeInText 4s ease-in-out;
 }
 
+.button-group {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap; 
+}
+
+.btn {
+  background-color: #ff69b4;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #e456a0;
+}
+
+.btn-outline {
+  background-color: transparent;
+  border: 2px solid #ff69b4;
+  color: #ff69b4;
+}
+
+.btn-outline:hover {
+  background-color: #ff69b4;
+  color: white;
+}
+
 /* Keyframes for the animations */
 @keyframes fadeIn {
   0% {
@@ -81,6 +117,10 @@
   .intro-text p {
     padding-bottom: 50px; /* Add padding below the paragraph */
   }
+  .button-group {
+    flex-direction: column;
+    gap: 10px;
+  }  
   .profile-image {
     width: 150px;
     height: 150px;

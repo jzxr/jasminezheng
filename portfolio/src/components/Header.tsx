@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSun, faMoon } from '@fortawesome/free-solid-svg-icons';
 
@@ -7,6 +7,7 @@ import logoLight from '../images/jasmine-zheng-web-light.png';
 import logoDark from '../images/jasmine-zheng-web-dark.png';
 import logoMobileLight from '../images/jasmine-zheng-mobile-light.png';
 import logoMobileDark from '../images/jasmine-zheng-mobile-dark.png';
+import { useScrollContext } from './context/ScrollContext';
 
 interface HeaderProps {
   toggleDarkMode: () => void;
@@ -14,6 +15,31 @@ interface HeaderProps {
 }
 
 const Header: React.FC<HeaderProps> = ({ toggleDarkMode, darkMode }) => {
+  const navigate = useNavigate();
+  const location = useLocation();
+  const {
+    setTriggerScrollToTimeline,
+    setTriggerScrollToProjects,
+    setTriggerScrollToHome
+  } = useScrollContext();
+
+  const handleScroll = (target: 'home' | 'projects' | 'timeline') => {
+    const setScrollTarget = {
+      home: setTriggerScrollToHome,
+      projects: setTriggerScrollToProjects,
+      timeline: setTriggerScrollToTimeline,
+    }[target];
+
+    setScrollTarget(true);
+
+    if (location.pathname !== '/') {
+      navigate('/');
+    } else {
+      const element = document.getElementById(target);
+      element?.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   const handleToggle = () => {
     toggleDarkMode();
   };
@@ -30,10 +56,19 @@ const Header: React.FC<HeaderProps> = ({ toggleDarkMode, darkMode }) => {
               </picture>
             </Link>
           </li>
-          <li className="nav-item"><Link to="/">Home</Link></li>
-          <li className="nav-item"><Link to="/projects">Projects</Link></li>
+
+          <li className="nav-item">
+            <button className="nav-link" onClick={() => handleScroll('home')}>Home</button>
+          </li>
+          <li className="nav-item">
+            <button className="nav-link" onClick={() => handleScroll('projects')}>Projects</button>
+          </li>
+          <li className="nav-item">
+            <button className="nav-link" onClick={() => handleScroll('timeline')}>Timeline</button>
+          </li>
         </ul>
       </nav>
+
       <div className="toggle-switch">
         <input
           type="checkbox"
