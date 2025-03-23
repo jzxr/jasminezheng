@@ -114,16 +114,22 @@
 
 /* Media query for mobile view */
 @media (max-width: 600px) {
+  .home-section {
+    height: 100vh;
+    padding: 20px 10px;
+    justify-content: center;
+    text-align: center;
+  }
   .intro-text p {
-    padding-bottom: 50px; /* Add padding below the paragraph */
+    padding-bottom: 50px; 
   }
   .button-group {
     flex-direction: column;
     gap: 10px;
   }  
   .profile-image {
-    width: 150px;
-    height: 150px;
+    width: 180px;
+    height: 180px;
     border-radius: 50%;
     margin-top: 20px;
     margin-bottom: 20px;

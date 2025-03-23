@@ -86,10 +86,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 30px; /* Adjusted size */
-  height: 30px; /* Adjusted size */
-  background-color: #ff69b4; /* Hot pink background */
-  border-radius: 50%; /* Circular toggle button */
+  width: 30px; 
+  height: 30px; 
+  background-color: #ff69b4; 
+  border-radius: 50%; 
   transition: background-color 0.3s;
 }
 
@@ -109,38 +109,105 @@
     padding: 20px 0; /* Adjust padding for alignment */
   }
 
+  .nav-list.open {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    left: 10px;
+    right: 10px;
+    padding: 20px 0;
+    z-index: 9998;
+    border-radius: 12px;
+    backdrop-filter: blur(10px);
+    animation: fadeSlideDown 0.3s ease-out;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Light Mode */
+  .light-mode .nav-list.open {
+    background-color: rgba(255, 255, 255, 0.9);
+  }
+  
+  /* Dark Mode */
+  .dark-mode .nav-list.open {
+    background-color: rgba(0, 0, 0, 0.85);
+  }
+  
   .logo {
     margin-top: 30px;
-    width: 80px; /* Adjust logo size for mobile */
+    width: 70px; 
     height: auto;
   }
 
-  .toggle-label {
-    width: 25px; /* Adjust size for mobile */
-    height: 25px; /* Adjust size for mobile */
+  .toggle-label .light-mode .dark-mode{
+    width: 25px; 
+    height: 25px; 
+    color: #ff69b4;
   }
 
   .toggle-switch {
-    margin-top: 10px; /* Adjust space between nav and toggle switch */
+    margin-top: 18px; 
     margin-bottom: 20px; 
   }
 
   .nav-list {
-    flex-direction: column; /* Stack items vertically on mobile */
+    display: none;
   }
 
+  .hamburger {
+    display: block;
+    font-size: 24px;
+    background: transparent;
+    border: none;
+    color: var(--header-color);
+    cursor: pointer;
+    position: absolute;
+    top: 13px;
+    right: 60px;
+    z-index: 10000;
+  }
+
+  .hamburger:focus,
+  .hamburger:active {
+    background: transparent;
+    outline: none;
+    box-shadow: none;
+  }
+
+  .hamburger:focus-visible {
+    outline: none;
+  }
+  
   .nav-item {
     margin-left: 0;
     margin-top: 10px;
   }
 
   .header {
-    flex-direction: column;
+    height: 80px;
+    flex-direction: row;
     align-items: center;
+    justify-content: space-between;
   }
 
   .nav {
     margin-bottom: 10px;
+  }
+ 
+  .icon {
+    font-size: 20px; 
+    color: white;
+  }
+  @keyframes fadeSlideDown {
+    0% {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
   
 }

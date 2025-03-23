@@ -103,6 +103,4 @@ export const experience = [
     iconType: "cert",
     color: "#10B981"
   }
-  
-  
 ];

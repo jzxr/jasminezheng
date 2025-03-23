@@ -10,7 +10,7 @@ const Home: React.FC<HomeProps> = ({ darkMode }) => {
   return (
     <section id="home" className={`home-section ${darkMode ? 'dark' : 'light'}`}>
       <div className="introduction">
-        <img src={profileImage} alt="Profile" className="profile-image" />
+        <img loading="lazy" src={profileImage} alt="Profile" className="profile-image" />
         <div className="intro-text">
           <h1>Hello, I'm Jasmine Zheng</h1>
           <p>I am a Full Stack Developer in Singapore.</p>

@@ -46,7 +46,7 @@ const ProjectDetails: React.FC<HomeProps> = ({ darkMode }) => {
         <Slider {...sliderSettings} className="project-carousel">
           {project.images.map((img, index) => (
             <div key={index}>
-              <img src={img} alt={`${project.title} - ${index + 1}`} className="carousel-image" />
+              <img loading="lazy" src={img} alt={`${project.title} - ${index + 1}`} className="carousel-image" />
             </div>
           ))}
         </Slider>
