@@ -6,14 +6,12 @@ import "./App.css";
 import "./styles/Header.css";
 import HomePage from "./components/HomePage";
 import ProjectDetails from "./components/ProjectDetails";
-import usePageTracking from "./UsePageTracking";
 
 const App: React.FC = () => {
   const [darkMode, setDarkMode] = useState(() => {
     return localStorage.getItem("darkMode") === "true"; 
   });
   
-  usePageTracking();
   useEffect(() => {
     const logo = document.querySelector("link[rel='icon']");
     if (logo) {
@@ -31,6 +29,7 @@ const App: React.FC = () => {
     <div>
       <Router>
         <DynamicTitle />
+        usePageTracking();
         <Header toggleDarkMode={toggleDarkMode} darkMode={darkMode} />
         <Routes>
           <Route path="/" element={<HomePage darkMode={darkMode} />} />
