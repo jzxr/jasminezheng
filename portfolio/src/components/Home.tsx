@@ -1,6 +1,6 @@
 import React from 'react';
 import '../styles/Home.css';
-import profileImage from '../images/profile-image.jpeg';
+import profileImage from '../images/profile-image.webp';
 
 interface HomeProps {
   darkMode: boolean;
