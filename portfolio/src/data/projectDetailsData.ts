@@ -66,5 +66,45 @@ export const projectDetails: Record<string, ProjectDetail> = {
             <li>Praised for its ability to simplify cashless payments for <strong>hawkers and customers</strong>.</li>
         </ul>
         `,
-    }
+    },
+    "growth-mobile-app": {
+        title: "Growth Mobile App",
+        date: "February 1, 2022",
+        author: "Jasmine Zheng",
+        video: "",
+        images: [
+          "/images/growth-mobile-app/home-page.jpg",
+          "/images/growth-mobile-app/claims.png",
+        ],
+        content: `
+          <p><strong>Growth</strong> is a mobile application developed as part of the Mobile Application Development project. It addresses key HR needs by offering six essential modules: Attendance, Calendar, Claims, Leaves, Payslip, and a customizable Home Dashboard.</p>
+          
+          <h3>🚀 Key Features:</h3>
+          <ul>
+            <li><strong>Biometric Authentication</strong> for attendance check-in/out</li>
+            <li><strong>OCR (Optical Character Recognition)</strong> for claim receipt scanning</li>
+            <li>Realtime data sync using <strong>Firebase</strong> (Auth, Firestore, Storage)</li>
+            <li><strong>Human-Centered Design</strong> with an intuitive and clean UI</li>
+          </ul>
+      
+          <h3>🎯 Modules Implemented:</h3>
+          <ul>
+            <li><strong>Home</strong> – Dashboard overview with donut charts for leave and claim summaries</li>
+            <li><strong>Calendar</strong> – Custom calendar view with support for adding/viewing events</li>
+            <li><strong>Claims</strong> – Easy submission of expense claims, complete with OCR functionality</li>
+            <li><strong>Leaves</strong> – View, apply, and track leave status</li>
+            <li><strong>Attendance</strong> – Team attendance visibility, personal history, and biometric logins</li>
+            <li><strong>Payslip</strong> – View salary breakdown and download via email</li>
+          </ul>
+      
+          <h3>🔧 Technologies & Architecture:</h3>
+          <ul>
+            <li>MVVM architecture with LiveData, Repository, and ViewModel patterns</li>
+            <li>Firebase: Auth, Cloud Firestore, and Cloud Storage</li>
+            <li>Material Design components, custom calendar (.aar), and biometric prompt</li>
+          </ul>
+      
+          <p>Growth streamlines HR operations for modern workplaces—designed with remote employees in mind, and focused on simplicity, security, and speed.</p>
+        `,
+      }      
 };
