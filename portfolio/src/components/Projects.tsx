@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronRight } from '@fortawesome/free-solid-svg-icons';
+import { faGithub, faYoutube } from '@fortawesome/free-brands-svg-icons';
 import '../styles/Projects.css';
 import { useScrollContext } from './context/ScrollContext';
 import { projects } from '../data/projectsData';
@@ -45,11 +46,43 @@ const Projects: React.FC<HomeProps> = ({ darkMode }) => {
                   <span key={index} className="tech-stack">{tech}</span>
                 ))}
               </div>
+             <div className="project-actions">
+              <div className="project-links">
+              <div className="tooltip-wrapper">
+                {project.githubUrl && (<a
+                    href={project.githubUrl}
+                    className="btn-outline"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="GitHub"
+                  >
+                    <FontAwesomeIcon icon={faGithub} />
+                  </a>
+                )}
+                <span className="tooltip-text">View on GitHub</span>
+              </div>
+
+              <div className="tooltip-wrapper">
+              {project.youtubeUrl && (<a
+                  href={project.youtubeUrl}
+                  className="btn-outline"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="YouTube"
+                >
+                  <FontAwesomeIcon icon={faYoutube} />
+                </a>
+              )}
+                <span className="tooltip-text">Watch on YouTube</span>
+              </div>
+
+              </div>
 
               <Link to={project.link} className="read-more">
                 <span>Read More</span>
                 <FontAwesomeIcon icon={faChevronRight} className="read-more-icon" />
               </Link>
+            </div>
             </div>
           );
         })}

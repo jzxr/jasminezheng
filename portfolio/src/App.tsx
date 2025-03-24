@@ -6,12 +6,14 @@ import "./App.css";
 import "./styles/Header.css";
 import HomePage from "./components/HomePage";
 import ProjectDetails from "./components/ProjectDetails";
+import usePageTracking from "./UsePageTracking";
 
 const App: React.FC = () => {
   const [darkMode, setDarkMode] = useState(() => {
     return localStorage.getItem("darkMode") === "true"; 
   });
-
+  
+  usePageTracking();
   useEffect(() => {
     const logo = document.querySelector("link[rel='icon']");
     if (logo) {

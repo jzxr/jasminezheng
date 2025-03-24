@@ -125,6 +125,77 @@
   transform: scale(1.05);
 }
 
+.project-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+  padding-top: 10px;
+  width: 100%;
+}
+
+.project-links {
+  display: flex;
+  gap: 15px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  color: white;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.5rem;
+  transition: background-color 0.3s;
+}
+
+.btn-outline {
+  background: none;
+  border: none;
+  padding: 0;
+  color: var(--header-color); 
+  font-size: 1.5rem; 
+  margin-bottom: 10px;
+  display: inline-flex;
+  align-items: center;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-outline:hover {
+  color: var(--button-hover-background); /* highlight color */
+  transform: scale(1.2); /* optional zoom effect */
+  background: none !important; /* just in case */
+}
+
+.tooltip-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip-text {
+  visibility: hidden;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 8px;
+  font-size: 12px;
+  position: absolute;
+  z-index: 10;
+  bottom: 125%; /* position above the icon */
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip-wrapper:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}
+
 @keyframes fadeIn {
   from {
     opacity: 0;
